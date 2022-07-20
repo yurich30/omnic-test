@@ -1,0 +1,11 @@
+{
+  "max-len": ["error", { "code": 100, "ignoreUrls": true }],
+  "singleQuote": true,
+  "jsxSingleQuote": true,
+  "useTabs": false,
+  "semi": true,
+  "trailingComma": "all",
+  "bracketSpacing": true,
+  "arrowParens": "avoid",
+  "tabWidth": 2
+}
