@@ -24,6 +24,18 @@ const ButtonStyled = styled.button<ButtonProps>`
         ? props.theme.colors.button.secondary.color
         : props.theme.colors.button.primary.color};
     text-transform: uppercase;
+    cursor: pointer;
+
+    &:hover {
+      color: ${props =>
+        props.$type === 'secondary'
+          ? props.theme.colors.button.primary.color
+          : props.theme.colors.button.secondary.color};
+      background-color: ${props =>
+        props.$type === 'secondary'
+          ? props.theme.colors.button.secondary.color
+          : props.theme.colors.button.primary.color};
+    }
   }
 `;
 

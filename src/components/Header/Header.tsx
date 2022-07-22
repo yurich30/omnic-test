@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import { Link } from 'react-router-dom';
 import Container from '../Container/Container';
 import { HeaderContent, LinkStyled } from './Header.styled';
 import { useAppSelector } from '../../hooks/redux';
@@ -11,7 +12,9 @@ const Header: FC = () => {
     <header>
       <Container>
         <HeaderContent>
-          <img src='/logo.svg' alt='Logo' />
+          <Link to={`/${device.uid}`}>
+            <img src='/logo.svg' alt='Logo' />
+          </Link>
           <nav>
             <LinkStyled $type='secondary' to='/'>
               Інструкція

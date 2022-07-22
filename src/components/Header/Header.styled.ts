@@ -29,6 +29,13 @@ const LinkStyled = styled(Link)<LinkStyledProps>`
       ? props.theme.colors.link.primary.color
       : props.theme.colors.link.secondary.color};
 
+  &:hover {
+    color: ${props =>
+      props.$type === 'secondary'
+        ? props.theme.colors.link.primary.color
+        : props.theme.colors.link.secondary.color};
+  }
+
   ${ViewModeQueries.XL} {
     font-size: ${props =>
       props.$type === 'primary'

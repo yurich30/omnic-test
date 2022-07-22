@@ -9,6 +9,10 @@ const NavCardsWrapper = styled.div`
   justify-content: space-between;
   max-width: 932px;
   width: 100%;
+
+  a {
+    text-decoration: none;
+  }
 `;
 
 export { SubTitle, NavCardsWrapper };

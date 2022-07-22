@@ -6,6 +6,7 @@ const baseColors = {
   gradient: 'linear-gradient(90deg, #011461 23.89%, #032EDD 93.33%)',
   fontColor: '#000',
   fontColorSecondary: '#57565E',
+  backgroundPrimary: '#F5F5F5',
 };
 
 const lightTheme = {

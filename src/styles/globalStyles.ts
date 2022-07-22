@@ -7,6 +7,7 @@ const GlobalStyles = createGlobalStyle<{
 }>`
   body {
     font-family: 'Montserrat';
+    background-color: ${props => props.theme.colors.backgroundPrimary};
   }
   
   h1 {
