@@ -6,6 +6,7 @@ import { ThemeProvider } from 'styled-components';
 import App from './App';
 import { store } from './store/store';
 import lightTheme from './styles/themes/lightTheme';
+import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement,

@@ -2,6 +2,7 @@ const baseColors = {
   primary: '#032EDD',
   secondary: '#57565E',
   white: '#fff',
+  grey: '#E6E6E6',
   gradient: 'linear-gradient(90deg, #011461 23.89%, #032EDD 93.33%)',
   fontColor: '#000',
   fontColorSecondary: '#57565E',
@@ -45,6 +46,7 @@ const lightTheme = {
   },
   borderRadius: {
     br4: '4px',
+    br20: '20px',
   },
 };
 

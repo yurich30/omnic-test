@@ -11,11 +11,12 @@ import './styles/fonts.css';
 import GlobalStyles from './styles/globalStyles';
 import { deviceSelector } from './store/reducers/device/deviceSelector';
 import Header from './components/Header/Header';
+import Loader from './components/Loader/Loader';
 
 function App() {
   const location = useLocation();
   const dispatch = useAppDispatch();
-  const { device, isLoading, error } = useAppSelector(deviceSelector);
+  const { isLoading, error } = useAppSelector(deviceSelector);
 
   const deviceId = location.pathname.split('').slice(1, 37).join('');
 
@@ -23,9 +24,13 @@ function App() {
     dispatch(fetchDevice(deviceId));
   }, []);
 
-  console.log(device);
-  console.log(isLoading);
-  console.log(error);
+  if (isLoading) {
+    return <Loader />;
+  }
+
+  if (error) {
+    return <h1>Перевірте коректність введеного вами device_uid в адресі</h1>;
+  }
 
   return (
     <>
