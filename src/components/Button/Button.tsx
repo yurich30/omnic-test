@@ -1,7 +1,7 @@
 import { FC, PropsWithChildren } from 'react';
 import { ButtonStyled } from './Button.styled';
 
-export interface ButtonProps {
+interface ButtonProps {
   $type: 'primary' | 'secondary';
   $textSize: 'large' | 'small';
   children: string;

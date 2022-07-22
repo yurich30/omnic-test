@@ -10,6 +10,7 @@ import './styles/reset.css';
 import './styles/fonts.css';
 import GlobalStyles from './styles/globalStyles';
 import { deviceSelector } from './store/reducers/device/deviceSelector';
+import Header from './components/Header/Header';
 
 function App() {
   const location = useLocation();
@@ -29,6 +30,7 @@ function App() {
   return (
     <>
       <GlobalStyles />
+      <Header />
       <Routes>
         <Route path='/:device_uid' element={<HomePage />} />
         <Route path='/:device_uid/packed' element={<PackedPage />} />
