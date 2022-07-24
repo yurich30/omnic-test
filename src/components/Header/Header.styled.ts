@@ -8,7 +8,7 @@ const HeaderContent = styled.div`
   align-items: center;
 
   nav > a:first-child {
-    margin-right: 44px;
+    margin-right: ${props => props.theme.spaces.s44};
   }
 
   ${ViewModeQueries.XL} {

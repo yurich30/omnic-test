@@ -40,6 +40,12 @@ const GlobalStyles = createGlobalStyle<{
     line-height: 19.5px;
     letter-spacing: 1px;
   }
+  
+  h6 {
+    font-size: 14px;
+    line-height: 17.07px;
+    font-weight: 500;
+  }
 
   button {
     font-weight: 700;

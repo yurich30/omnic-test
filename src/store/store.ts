@@ -1,9 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
 import deviceReducer from './reducers/device/deviceSlice';
+import deviceCellsReducer from './reducers/deviceCells/deviceCellsSlice';
 
 export const store = configureStore({
   reducer: {
     deviceReducer,
+    deviceCellsReducer,
   },
 });
 

@@ -37,7 +37,7 @@ const HomePage: FC = () => {
   ];
 
   const renderNavCards = navArray.map(el => (
-    <Link id={el.id} to={el.path}>
+    <Link key={el.id} to={el.path}>
       <NavCard image={el.image} text={el.text} />
     </Link>
   ));

@@ -10,7 +10,7 @@ const NavCardText = styled.button`
   color: ${props => props.theme.colors.white};
   background-color: ${props => props.theme.colors.primary};
   text-align: center;
-  padding: 20px 82px;
+  padding: ${props => props.theme.spaces.s20} ${props => props.theme.spaces.s82};
   border-radius: 0 0 ${props => props.theme.borderRadius.br20}
     ${props => props.theme.borderRadius.br20};
   text-transform: uppercase;

@@ -16,10 +16,10 @@ const Header: FC = () => {
             <img src='/logo.svg' alt='Logo' />
           </Link>
           <nav>
-            <LinkStyled $type='secondary' to='/'>
+            <LinkStyled $type='secondary' to={`/${device.uid}/packed`}>
               Інструкція
             </LinkStyled>
-            <LinkStyled $type='primary' to='/'>
+            <LinkStyled $type='primary' to={`/${device.uid}/packed/cells`}>
               Поштомат №{device.name}
             </LinkStyled>
           </nav>

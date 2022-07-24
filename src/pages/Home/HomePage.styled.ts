@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
-const SubTitle = styled.h2`
-  margin: 12px 0 68px;
+const SubTitle = styled.h4`
+  margin: ${props => props.theme.spaces.s12} 0
+    ${props => props.theme.spaces.s68};
 `;
 
 const NavCardsWrapper = styled.div`

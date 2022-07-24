@@ -30,3 +30,15 @@ interface DeviceLocation {
   };
   uid: string;
 }
+
+export interface DeviceCell {
+  name?: string | undefined;
+  type: string;
+  has_empty: boolean;
+  params: {
+    width: number;
+    height: number;
+    depth: number;
+    label: string;
+  };
+}

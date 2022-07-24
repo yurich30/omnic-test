@@ -12,17 +12,18 @@ import GlobalStyles from './styles/globalStyles';
 import { deviceSelector } from './store/reducers/device/deviceSelector';
 import Header from './components/Header/Header';
 import Loader from './components/Loader/Loader';
+import SuccessPage from './pages/Success/SuccessPage';
 
 function App() {
   const location = useLocation();
   const dispatch = useAppDispatch();
-  const { isLoading, error } = useAppSelector(deviceSelector);
+  const { device, isLoading, error } = useAppSelector(deviceSelector);
 
   const deviceId = location.pathname.split('').slice(1, 37).join('');
 
   useEffect(() => {
     dispatch(fetchDevice(deviceId));
-  }, []);
+  }, [device.uid]);
 
   if (isLoading) {
     return <Loader />;
@@ -39,7 +40,11 @@ function App() {
       <Routes>
         <Route path='/:device_uid' element={<HomePage />} />
         <Route path='/:device_uid/packed' element={<PackedPage />} />
-        <Route path='/:device_uid/packed/cellsize' element={<CellSizePage />} />
+        <Route path='/:device_uid/packed/cells' element={<CellSizePage />} />
+        <Route
+          path='/:device_uid/packed/cells/success'
+          element={<SuccessPage />}
+        />
         <Route path='*' element={<NotFoundPage />} />
       </Routes>
     </>

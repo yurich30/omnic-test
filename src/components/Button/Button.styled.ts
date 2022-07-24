@@ -36,6 +36,12 @@ const ButtonStyled = styled.button<ButtonProps>`
           ? props.theme.colors.button.secondary.color
           : props.theme.colors.button.primary.color};
     }
+
+    &:disabled {
+      color: ${props => props.theme.colors.darkGrey};
+      border: 2px solid ${props => props.theme.colors.darkGrey};
+      background-color: ${props => props.theme.colors.white};
+    }
   }
 `;
 

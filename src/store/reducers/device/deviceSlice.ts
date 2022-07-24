@@ -1,8 +1,9 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { Device } from '../../../types/device';
+import { Device, DeviceCell } from '../../../types/device';
 
 interface DeviceState {
   device: Device;
+  device_cells: Array<DeviceCell>;
   isLoading: boolean;
   error: string;
 }
@@ -38,6 +39,7 @@ const initialState: DeviceState = {
     is_online: false,
     uid: '',
   },
+  device_cells: [],
   isLoading: false,
   error: '',
 };
@@ -57,10 +59,17 @@ const deviceSlice = createSlice({
       state.isLoading = false;
       state.error = action.payload;
     },
+    addDeviceUidFromUrl: (state, action: PayloadAction<string>) => {
+      state.device.uid = action.payload;
+    },
   },
 });
 
-export const { deviceFetching, deviceFetchingSuccess, deviceFetchingError } =
-  deviceSlice.actions;
+export const {
+  deviceFetching,
+  deviceFetchingSuccess,
+  deviceFetchingError,
+  addDeviceUidFromUrl,
+} = deviceSlice.actions;
 
 export default deviceSlice.reducer;

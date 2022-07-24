@@ -6,7 +6,8 @@ const PackedRulesWrapper = styled.div`
   align-items: center;
   width: 100%;
   max-width: 553px;
-  margin: 71px 0 100px;
+  margin: ${props => props.theme.spaces.s71} 0
+    ${props => props.theme.spaces.s100};
 
   img {
     width: 148px;
